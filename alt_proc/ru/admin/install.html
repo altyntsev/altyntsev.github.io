@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>alt_proc</title>
+  <meta name="description" content="Documentation for small projects">
+
+	<link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="canonical" href="http://0.0.0.0:2000/alt_proc/ru/admin/install.html">
+
+	<link rel="stylesheet" href="/assets/css/docs.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <sidebar class="sidebar" id="sidebar">
+        <ul class="navigation" id="navigation">
+            <li><a class="active" href="/">
+                root
+            </a></li>
+            <li><a class="active" href="/alt_proc/ru/main.html">
+                alt_processing (ru)
+            </a></li>
+            <li><a class="active" href="/alt_proc/en/main.html">
+                alt_processing (en)
+            </a></li>
+            <li><a class="active" href="/sputnik/ru/main.html">
+                sputnik (ru)
+            </a></li>
+            <li><a class="active" href="/sputnik/en/main.html">
+                sputnik (en)
+            </a></li>
+        </ul>
+    </sidebar>
+    <main class="content">
+        <div class="inner">
+            <h1 id="инсталляция">Инсталляция</h1>
+
+<h2 id="os">OS</h2>
+<pre><code>Ubuntu 20.04 LTS minimized
+sudo apt install net-tools postgresql
+</code></pre>
+<h2 id="python">Python</h2>
+<pre><code>3.7-3.9
+https://docs.conda.io/en/latest/miniconda.html
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod u+x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+conda install pyaml psutil psycopg2 uvicorn
+pip install fastapi
+</code></pre>
+<h2 id="layout">Layout</h2>
+<pre><code>mkdir alt_proc
+mkdir alt_proc/projects
+mkdir alt_proc/wd/launcher
+mkdir alt_proc/wd/ui
+</code></pre>
+<h2 id="get-sources">Get sources</h2>
+<pre><code>cd alt_proc/projects
+git clone git@github.com:altyntsev/alt_proc_api.git
+git clone git@github.com:altyntsev/alt_proc_libs.git
+git clone git@github.com:altyntsev/alt_proc_launcher.git
+git clone git@github.com:altyntsev/alt_proc_ui.git
+git clone git@github.com:altyntsev/alt_proc_proc_tpl.git
+</code></pre>
+<h2 id="database">Database</h2>
+<pre><code>sudo -u postgres psql
+create user alt_proc with encrypted password 'alt_proc';
+create database alt_proc;
+alter database alt_proc owner to alt_proc;
+psql -U alt_proc -d alt_proc -a -f \
+    alt_proc/projects/alt_proc_api/main/install/db.sql 
+</code></pre>
+<h2 id="cfg">Cfg</h2>
+<p>/alt_proc/projects/_cfg/alt_proc.cfg
+db:
+    host: 127.0.0.1
+    db: alt_proc
+    user: alt_proc
+    pwd: alt_proc
+ui_users:
+    - login: alt_proc
+      pwd: alt_proc</p>
+
+
+        </div>
+    </main>
+</div>
+<script src="/assets/js/zepto.min.js"></script>
+<script src="/assets/js/lunar.min.js"></script>
+<script src="/assets/js/prism.min.js"></script>
+<script src="/assets/js/database.js"></script>
+<script src="/assets/js/search.js"></script>
+<script src="/assets/js/mobile-navigation.js"></script>
+
+</body>
+</html>

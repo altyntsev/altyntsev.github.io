@@ -1,0 +1,6437 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>sputnik</title>
+  <meta name="description" content="Documentation for small projects">
+
+	<link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="canonical" href="http://0.0.0.0:2000/sputnik/ru/dev/api.html">
+
+	<link rel="stylesheet" href="/assets/css/docs.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <sidebar class="sidebar" id="sidebar">
+        <ul class="navigation" id="navigation">
+            <li><a class="active" href="/">
+                root
+            </a></li>
+            <li><a class="active" href="/alt_proc/ru/main.html">
+                alt_processing (ru)
+            </a></li>
+            <li><a class="active" href="/alt_proc/en/main.html">
+                alt_processing (en)
+            </a></li>
+            <li><a class="active" href="/sputnik/ru/main.html">
+                sputnik (ru)
+            </a></li>
+            <li><a class="active" href="/sputnik/en/main.html">
+                sputnik (en)
+            </a></li>
+        </ul>
+    </sidebar>
+    <main class="content">
+        <div class="inner">
+            <h1 id="fastapi">FastAPI</h1>
+<h2 id="version-010">Version: 0.1.0</h2>
+
+<h3 id="projectnew">/project/new</h3>
+
+<h4 id="post">POST</h4>
+<h5 id="summary">Summary:</h5>
+
+<p>Save project</p>
+
+<h5 id="description">Description:</h5>
+
+<pre><code>    Description: Save project to database
+</code></pre>
+
+<h5 id="responses">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="projectlist">/project/list</h3>
+
+<h4 id="get">GET</h4>
+<h5 id="summary-1">Summary:</h5>
+
+<p>Project list</p>
+
+<h5 id="responses-1">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-1">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="projectinfo">/project/info</h3>
+
+<h4 id="get-1">GET</h4>
+<h5 id="summary-2">Summary:</h5>
+
+<p>Project info</p>
+
+<h5 id="parameters">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>query</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-2">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-2">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tasklist">/task/list</h3>
+
+<h4 id="get-2">GET</h4>
+<h5 id="summary-3">Summary:</h5>
+
+<p>Task list</p>
+
+<h5 id="responses-3">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-3">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="taskrun">/task/run</h3>
+
+<h4 id="post-1">POST</h4>
+<h5 id="summary-4">Summary:</h5>
+
+<p>Run processing</p>
+
+<h5 id="responses-4">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-4">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="proclist">/proc/list</h3>
+
+<h4 id="get-3">GET</h4>
+<h5 id="summary-5">Summary:</h5>
+
+<p>Processing list</p>
+
+<h5 id="parameters-1">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>query</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-5">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-5">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="metalist">/meta/list</h3>
+
+<h4 id="get-4">GET</h4>
+<h5 id="summary-6">Summary:</h5>
+
+<p>Scenes metadata for date</p>
+
+<h5 id="parameters-2">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>query</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>date</td>
+      <td>query</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-6">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-6">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="metadates">/meta/dates</h3>
+
+<h4 id="get-5">GET</h4>
+<h5 id="summary-7">Summary:</h5>
+
+<p>Date list of available metadata</p>
+
+<h5 id="parameters-3">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>query</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-7">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-7">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rgblist">/rgb/list</h3>
+
+<h4 id="get-6">GET</h4>
+<h5 id="summary-8">Summary:</h5>
+
+<p>Scenes metadata for date</p>
+
+<h5 id="parameters-4">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>query</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-8">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-8">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rgbtileproject_idproduct_idzxy">/rgb/tile/{project_id}/{product_id}/{z}/{x}/{y}</h3>
+
+<h4 id="get-7">GET</h4>
+<h5 id="summary-9">Summary:</h5>
+
+<p>Get tile</p>
+
+<h5 id="parameters-5">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>product_id</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-9">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-9">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogbounds">/cog/bounds</h3>
+
+<h4 id="get-8">GET</h4>
+<h5 id="summary-10">Summary:</h5>
+
+<p>Bounds</p>
+
+<h5 id="description-1">Description:</h5>
+
+<p>Return the bounds of the COG.</p>
+
+<h5 id="parameters-6">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-10">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return dataset’s bounds.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-10">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="coginfo">/cog/info</h3>
+
+<h4 id="get-9">GET</h4>
+<h5 id="summary-11">Summary:</h5>
+
+<p>Info</p>
+
+<h5 id="description-2">Description:</h5>
+
+<p>Return dataset’s basic info.</p>
+
+<h5 id="parameters-7">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-11">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return dataset’s basic info.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-11">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="coginfogeojson">/cog/info.geojson</h3>
+
+<h4 id="get-10">GET</h4>
+<h5 id="summary-12">Summary:</h5>
+
+<p>Info Geojson</p>
+
+<h5 id="description-3">Description:</h5>
+
+<p>Return dataset’s basic info as a GeoJSON feature.</p>
+
+<h5 id="parameters-8">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-12">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return dataset’s basic info as a GeoJSON feature.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-12">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogstatistics">/cog/statistics</h3>
+
+<h4 id="get-11">GET</h4>
+<h5 id="summary-13">Summary:</h5>
+
+<p>Statistics</p>
+
+<h5 id="description-4">Description:</h5>
+
+<p>Create image from a geojson feature.</p>
+
+<h5 id="parameters-9">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>query</td>
+      <td>Force output image height.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>query</td>
+      <td>Force output image width.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>categorical</td>
+      <td>query</td>
+      <td>Return statistics for categorical dataset.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>query</td>
+      <td>List of values for which to report counts.</td>
+      <td>No</td>
+      <td>[  ]</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>query</td>
+      <td>List of percentile values.</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>histogram_bins</td>
+      <td>query</td>
+      <td>Defines the number of equal-width bins in the given range (10, by default).  If bins is a sequence (comma <code>,</code> delimited values), it defines a monotonically increasing array of bin edges, including the rightmost edge, allowing for non-uniform bin widths.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>histogram_range</td>
+      <td>query</td>
+      <td>Comma <code>,</code> delimited range of the bins.  The lower and upper range of the bins. If not provided, range is simply (a.min(), a.max()).  Values outside the range are ignored. The first element of the range must be less than or equal to the second. range affects the automatic bin computation as well.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-13">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return dataset’s statistics.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-13">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="post-2">POST</h4>
+<h5 id="summary-14">Summary:</h5>
+
+<p>Geojson Statistics</p>
+
+<h5 id="description-5">Description:</h5>
+
+<p>Get Statistics from a geojson feature or featureCollection.</p>
+
+<h5 id="parameters-10">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>query</td>
+      <td>Force output image height.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>query</td>
+      <td>Force output image width.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>categorical</td>
+      <td>query</td>
+      <td>Return statistics for categorical dataset.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>query</td>
+      <td>List of values for which to report counts.</td>
+      <td>No</td>
+      <td>[  ]</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>query</td>
+      <td>List of percentile values.</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>histogram_bins</td>
+      <td>query</td>
+      <td>Defines the number of equal-width bins in the given range (10, by default).  If bins is a sequence (comma <code>,</code> delimited values), it defines a monotonically increasing array of bin edges, including the rightmost edge, allowing for non-uniform bin widths.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>histogram_range</td>
+      <td>query</td>
+      <td>Comma <code>,</code> delimited range of the bins.  The lower and upper range of the bins. If not provided, range is simply (a.min(), a.max()).  Values outside the range are ignored. The first element of the range must be less than or equal to the second. range affects the automatic bin computation as well.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-14">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return dataset’s statistics.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-14">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtilestilematrixsetidzxyscalexformat">/cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}@{scale}x.{format}</h3>
+
+<h4 id="get-12">GET</h4>
+<h5 id="summary-15">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-6">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-11">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-15">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-15">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtilestilematrixsetidzxyscalex">/cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}@{scale}x</h3>
+
+<h4 id="get-13">GET</h4>
+<h5 id="summary-16">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-7">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-12">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-16">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-16">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtilestilematrixsetidzxyformat">/cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}.{format}</h3>
+
+<h4 id="get-14">GET</h4>
+<h5 id="summary-17">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-8">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-13">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-17">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-17">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtilestilematrixsetidzxy">/cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}</h3>
+
+<h4 id="get-15">GET</h4>
+<h5 id="summary-18">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-9">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-14">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-18">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-18">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtileszxyscalexformat">/cog/tiles/{z}/{x}/{y}@{scale}x.{format}</h3>
+
+<h4 id="get-16">GET</h4>
+<h5 id="summary-19">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-10">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-15">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>query</td>
+      <td>TileMatrixSet Name (default: ‘WebMercatorQuad’)</td>
+      <td>No</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-19">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-19">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtileszxyscalex">/cog/tiles/{z}/{x}/{y}@{scale}x</h3>
+
+<h4 id="get-17">GET</h4>
+<h5 id="summary-20">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-11">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-16">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>query</td>
+      <td>TileMatrixSet Name (default: ‘WebMercatorQuad’)</td>
+      <td>No</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-20">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-20">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtileszxyformat">/cog/tiles/{z}/{x}/{y}.{format}</h3>
+
+<h4 id="get-18">GET</h4>
+<h5 id="summary-21">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-12">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-17">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>query</td>
+      <td>TileMatrixSet Name (default: ‘WebMercatorQuad’)</td>
+      <td>No</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-21">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-21">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtileszxy">/cog/tiles/{z}/{x}/{y}</h3>
+
+<h4 id="get-19">GET</h4>
+<h5 id="summary-22">Summary:</h5>
+
+<p>Tile</p>
+
+<h5 id="description-13">Description:</h5>
+
+<p>Create map tile from a dataset.</p>
+
+<h5 id="parameters-18">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>z</td>
+      <td>path</td>
+      <td>TMS tiles’s zoom level</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>path</td>
+      <td>TMS tiles’s column</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>path</td>
+      <td>TMS tiles’s row</td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>query</td>
+      <td>TileMatrixSet Name (default: ‘WebMercatorQuad’)</td>
+      <td>No</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-22">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-22">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtilematrixsetidtilejsonjson">/cog/{TileMatrixSetId}/tilejson.json</h3>
+
+<h4 id="get-20">GET</h4>
+<h5 id="summary-23">Summary:</h5>
+
+<p>Tilejson</p>
+
+<h5 id="description-14">Description:</h5>
+
+<p>Return TileJSON document for a dataset.</p>
+
+<h5 id="parameters-19">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>tile_format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>tile_scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>minzoom</td>
+      <td>query</td>
+      <td>Overwrite default minzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>maxzoom</td>
+      <td>query</td>
+      <td>Overwrite default maxzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-23">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return a tilejson</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-23">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtilejsonjson">/cog/tilejson.json</h3>
+
+<h4 id="get-21">GET</h4>
+<h5 id="summary-24">Summary:</h5>
+
+<p>Tilejson</p>
+
+<h5 id="description-15">Description:</h5>
+
+<p>Return TileJSON document for a dataset.</p>
+
+<h5 id="parameters-20">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tile_format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>tile_scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>minzoom</td>
+      <td>query</td>
+      <td>Overwrite default minzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>maxzoom</td>
+      <td>query</td>
+      <td>Overwrite default maxzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>buffer</td>
+      <td>query</td>
+      <td>Buffer on each side of the given tile. It must be a multiple of <code>0.5</code>. Output <strong>tilesize</strong> will be expanded to <code>tilesize + 2 * tile_buffer</code> (e.g 0.5 = 257x257, 1.0 = 258x258).</td>
+      <td>No</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>query</td>
+      <td>TileMatrixSet Name (default: ‘WebMercatorQuad’)</td>
+      <td>No</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-24">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return a tilejson</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-24">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogtilematrixsetidwmtscapabilitiesxml">/cog/{TileMatrixSetId}/WMTSCapabilities.xml</h3>
+
+<h4 id="get-22">GET</h4>
+<h5 id="summary-25">Summary:</h5>
+
+<p>Wmts</p>
+
+<h5 id="description-16">Description:</h5>
+
+<p>OGC WMTS endpoint.</p>
+
+<h5 id="parameters-21">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>tile_format</td>
+      <td>query</td>
+      <td>Output image type. Default is png.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>tile_scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>minzoom</td>
+      <td>query</td>
+      <td>Overwrite default minzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>maxzoom</td>
+      <td>query</td>
+      <td>Overwrite default maxzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-25">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-25">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogwmtscapabilitiesxml">/cog/WMTSCapabilities.xml</h3>
+
+<h4 id="get-23">GET</h4>
+<h5 id="summary-26">Summary:</h5>
+
+<p>Wmts</p>
+
+<h5 id="description-17">Description:</h5>
+
+<p>OGC WMTS endpoint.</p>
+
+<h5 id="parameters-22">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tile_format</td>
+      <td>query</td>
+      <td>Output image type. Default is png.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>tile_scale</td>
+      <td>query</td>
+      <td>Tile size scale. 1=256x256, 2=512x512…</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>minzoom</td>
+      <td>query</td>
+      <td>Overwrite default minzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>maxzoom</td>
+      <td>query</td>
+      <td>Overwrite default maxzoom.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>TileMatrixSetId</td>
+      <td>query</td>
+      <td>TileMatrixSet Name (default: ‘WebMercatorQuad’)</td>
+      <td>No</td>
+      <td><a href="#tilematrixsetname">TileMatrixSetName</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-26">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-26">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogpointlonlat">/cog/point/{lon},{lat}</h3>
+
+<h4 id="get-24">GET</h4>
+<h5 id="summary-27">Summary:</h5>
+
+<p>Point</p>
+
+<h5 id="description-18">Description:</h5>
+
+<p>Get Point value for a dataset.</p>
+
+<h5 id="parameters-23">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lon</td>
+      <td>path</td>
+      <td>Longitude</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>lat</td>
+      <td>path</td>
+      <td>Latitude</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-27">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return a value for a point</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-27">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogpreviewformat">/cog/preview.{format}</h3>
+
+<h4 id="get-25">GET</h4>
+<h5 id="summary-28">Summary:</h5>
+
+<p>Preview</p>
+
+<h5 id="description-19">Description:</h5>
+
+<p>Create preview of a dataset.</p>
+
+<h5 id="parameters-24">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>query</td>
+      <td>Force output image height.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>query</td>
+      <td>Force output image width.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-28">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-28">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogpreview">/cog/preview</h3>
+
+<h4 id="get-26">GET</h4>
+<h5 id="summary-29">Summary:</h5>
+
+<p>Preview</p>
+
+<h5 id="description-20">Description:</h5>
+
+<p>Create preview of a dataset.</p>
+
+<h5 id="parameters-25">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>query</td>
+      <td>Force output image height.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>query</td>
+      <td>Force output image width.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-29">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-29">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogcropminxminymaxxmaxywidthxheightformat">/cog/crop/{minx},{miny},{maxx},{maxy}/{width}x{height}.{format}</h3>
+
+<h4 id="get-27">GET</h4>
+<h5 id="summary-30">Summary:</h5>
+
+<p>Part</p>
+
+<h5 id="description-21">Description:</h5>
+
+<p>Create image from part of a dataset.</p>
+
+<h5 id="parameters-26">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>minx</td>
+      <td>path</td>
+      <td>Bounding box min X</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>miny</td>
+      <td>path</td>
+      <td>Bounding box min Y</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>maxx</td>
+      <td>path</td>
+      <td>Bounding box max X</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>maxy</td>
+      <td>path</td>
+      <td>Bounding box max Y</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-30">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-30">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogcropminxminymaxxmaxyformat">/cog/crop/{minx},{miny},{maxx},{maxy}.{format}</h3>
+
+<h4 id="get-28">GET</h4>
+<h5 id="summary-31">Summary:</h5>
+
+<p>Part</p>
+
+<h5 id="description-22">Description:</h5>
+
+<p>Create image from part of a dataset.</p>
+
+<h5 id="parameters-27">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>minx</td>
+      <td>path</td>
+      <td>Bounding box min X</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>miny</td>
+      <td>path</td>
+      <td>Bounding box min Y</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>maxx</td>
+      <td>path</td>
+      <td>Bounding box max X</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>maxy</td>
+      <td>path</td>
+      <td>Bounding box max Y</td>
+      <td>Yes</td>
+      <td>number</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>query</td>
+      <td>Force output image height.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>query</td>
+      <td>Force output image width.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-31">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-31">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogcropwidthxheightformat">/cog/crop/{width}x{height}.{format}</h3>
+
+<h4 id="post-3">POST</h4>
+<h5 id="summary-32">Summary:</h5>
+
+<p>Geojson Crop</p>
+
+<h5 id="description-23">Description:</h5>
+
+<p>Create image from a geojson feature.</p>
+
+<h5 id="parameters-28">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-32">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-32">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogcropformat">/cog/crop.{format}</h3>
+
+<h4 id="post-4">POST</h4>
+<h5 id="summary-33">Summary:</h5>
+
+<p>Geojson Crop</p>
+
+<h5 id="description-24">Description:</h5>
+
+<p>Create image from a geojson feature.</p>
+
+<h5 id="parameters-29">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>format</td>
+      <td>path</td>
+      <td> </td>
+      <td>Yes</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>query</td>
+      <td>Force output image height.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>query</td>
+      <td>Force output image width.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-33">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-33">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cogcrop">/cog/crop</h3>
+
+<h4 id="post-5">POST</h4>
+<h5 id="summary-34">Summary:</h5>
+
+<p>Geojson Crop</p>
+
+<h5 id="description-25">Description:</h5>
+
+<p>Create image from a geojson feature.</p>
+
+<h5 id="parameters-30">Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Located in</th>
+      <th>Description</th>
+      <th>Required</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>format</td>
+      <td>query</td>
+      <td>Output image type. Default is auto.</td>
+      <td>No</td>
+      <td><a href="#imagetype">ImageType</a></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>query</td>
+      <td>Dataset URL</td>
+      <td>Yes</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>bidx</td>
+      <td>query</td>
+      <td>Dataset band indexes</td>
+      <td>No</td>
+      <td>[ integer ]</td>
+    </tr>
+    <tr>
+      <td>expression</td>
+      <td>query</td>
+      <td>rio-tiler’s band math expression</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>nodata</td>
+      <td>query</td>
+      <td>Overwrite internal Nodata value</td>
+      <td>No</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>unscale</td>
+      <td>query</td>
+      <td>Apply internal Scale/Offset</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>resampling</td>
+      <td>query</td>
+      <td>Resampling method.</td>
+      <td>No</td>
+      <td><a href="#resamplingname">ResamplingName</a></td>
+    </tr>
+    <tr>
+      <td>max_size</td>
+      <td>query</td>
+      <td>Maximum image size to read onto.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>query</td>
+      <td>Force output image height.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>query</td>
+      <td>Force output image width.</td>
+      <td>No</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td>rescale</td>
+      <td>query</td>
+      <td>comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.</td>
+      <td>No</td>
+      <td>[ string ]</td>
+    </tr>
+    <tr>
+      <td>color_formula</td>
+      <td>query</td>
+      <td>rio-color formula (info: https://github.com/mapbox/rio-color)</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>colormap_name</td>
+      <td>query</td>
+      <td>Colormap name</td>
+      <td>No</td>
+      <td><a href="#colormapname">ColorMapName</a></td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>query</td>
+      <td>JSON encoded custom Colormap</td>
+      <td>No</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>return_mask</td>
+      <td>query</td>
+      <td>Add mask to the output data.</td>
+      <td>No</td>
+      <td>boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="responses-34">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Return an image.</td>
+    </tr>
+    <tr>
+      <td>422</td>
+      <td>Validation Error</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-34">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>/</h3>
+
+<h4 id="get-29">GET</h4>
+<h5 id="summary-35">Summary:</h5>
+
+<p>Root</p>
+
+<h5 id="responses-35">Responses</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>Successful Response</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="security-35">Security</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Security Schema</th>
+      <th>Scopes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTPBasic</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="models">Models</h3>
+
+<h4 id="bandstatistics">BandStatistics</h4>
+
+<p>Image statistics</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>min</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>count</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>sum</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>median</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>majority</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>minority</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>unique</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>histogram</td>
+      <td>[ [  ] ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>valid_percent</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>masked_pixels</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>valid_pixels</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="boundingbox">BoundingBox</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>left</td>
+      <td> </td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>bottom</td>
+      <td> </td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td> </td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>top</td>
+      <td> </td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="bounds">Bounds</h4>
+
+<p>Dataset Bounding box</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bounds</td>
+      <td>[  ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="colormapname">ColorMapName</h4>
+
+<p>An enumeration.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ColorMapName</td>
+      <td> </td>
+      <td>An enumeration.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="feature">Feature</h4>
+
+<p>Feature Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>geometry</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>properties</td>
+      <td>object</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>bbox</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="featurecollection">FeatureCollection</h4>
+
+<p>FeatureCollection Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>features</td>
+      <td>[ <a href="#feature">Feature</a> ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>bbox</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="featurecollection_union_geojson_pydanticgeometriespoint__geojson_pydanticgeometriesmultipoint__geojson_pydanticgeometrieslinestring__geojson_pydanticgeometriesmultilinestring__geojson_pydanticgeometriespolygon__geojson_pydanticgeometriesmultipolygon__statisticsingeojson">FeatureCollection_Union_geojson_pydantic.geometries.Point__geojson_pydantic.geometries.MultiPoint__geojson_pydantic.geometries.LineString__geojson_pydantic.geometries.MultiLineString__geojson_pydantic.geometries.Polygon__geojson_pydantic.geometries.MultiPolygon__<em>StatisticsInGeoJSON</em></h4>
+
+<p>FeatureCollection Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>features</td>
+      <td>[ <a href="#feature_union_geojson_pydantic.geometries.point__geojson_pydantic.geometries.multipoint__geojson_pydantic.geometries.linestring__geojson_pydantic.geometries.multilinestring__geojson_pydantic.geometries.polygon__geojson_pydantic.geometries.multipolygon___statisticsingeojson_">Feature_Union_geojson_pydantic.geometries.Point__geojson_pydantic.geometries.MultiPoint__geojson_pydantic.geometries.LineString__geojson_pydantic.geometries.MultiLineString__geojson_pydantic.geometries.Polygon__geojson_pydantic.geometries.MultiPolygon__<em>StatisticsInGeoJSON</em></a> ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>bbox</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="feature_polygon__info_">Feature_Polygon__Info_</h4>
+
+<p>Feature Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>geometry</td>
+      <td><a href="#polygon">Polygon</a></td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>properties</td>
+      <td><a href="#info">Info</a></td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>bbox</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="feature_union_geojson_pydanticgeometriespoint__geojson_pydanticgeometriesmultipoint__geojson_pydanticgeometrieslinestring__geojson_pydanticgeometriesmultilinestring__geojson_pydanticgeometriespolygon__geojson_pydanticgeometriesmultipolygon__statisticsingeojson">Feature_Union_geojson_pydantic.geometries.Point__geojson_pydantic.geometries.MultiPoint__geojson_pydantic.geometries.LineString__geojson_pydantic.geometries.MultiLineString__geojson_pydantic.geometries.Polygon__geojson_pydantic.geometries.MultiPolygon__<em>StatisticsInGeoJSON</em></h4>
+
+<p>Feature Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>geometry</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>properties</td>
+      <td><a href="#statisticsingeojson">StatisticsInGeoJSON</a></td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>bbox</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="httpvalidationerror">HTTPValidationError</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>detail</td>
+      <td>[ <a href="#validationerror">ValidationError</a> ]</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="imagetype">ImageType</h4>
+
+<p>Available Output image type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ImageType</td>
+      <td>string</td>
+      <td>Available Output image type.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="info">Info</h4>
+
+<p>Dataset Info.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bounds</td>
+      <td>[  ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>minzoom</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>maxzoom</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>band_metadata</td>
+      <td>[ [  ] ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>band_descriptions</td>
+      <td>[ [  ] ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>dtype</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>nodata_type</td>
+      <td><a href="#nodatatypes">NodataTypes</a></td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>colorinterp</td>
+      <td>[ string ]</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>number</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>offset</td>
+      <td>number</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>colormap</td>
+      <td>object</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="linestring">LineString</h4>
+
+<p>LineString Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>coordinates</td>
+      <td>[  ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="metares">MetaRes</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>scene_id</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>date</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>border</td>
+      <td>binary</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>filename</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>xg0</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>xg1</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>yg0</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>yg1</td>
+      <td>number</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>border_gj</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="multilinestring">MultiLineString</h4>
+
+<p>MultiLineString Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>coordinates</td>
+      <td>[ [  ] ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="multipoint">MultiPoint</h4>
+
+<p>MultiPoint Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>coordinates</td>
+      <td>[  ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="multipolygon">MultiPolygon</h4>
+
+<p>MultiPolygon Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>coordinates</td>
+      <td>[ [ [  ] ] ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nodatatypes">NodataTypes</h4>
+
+<p>rio-tiler Nodata types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NodataTypes</td>
+      <td>string</td>
+      <td>rio-tiler Nodata types.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="polygon">Polygon</h4>
+
+<p>Polygon Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>coordinates</td>
+      <td>[ [  ] ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="procres">ProcRes</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>event_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>result</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>params</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>task_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>ctime</td>
+      <td>dateTime</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>proc_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>task</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>scripts</td>
+      <td>[ <a href="#scriptres">ScriptRes</a> ]</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="project">Project</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>login</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>start_date</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>end_date</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>border</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="resamplingname">ResamplingName</h4>
+
+<p>An enumeration.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ResamplingName</td>
+      <td> </td>
+      <td>An enumeration.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="schemeenum">SchemeEnum</h4>
+
+<p>TileJSON scheme choice.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SchemeEnum</td>
+      <td>string</td>
+      <td>TileJSON scheme choice.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="scriptres">ScriptRes</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>proc_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>iscript</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>result</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="statisticsingeojson">StatisticsInGeoJSON</h4>
+
+<p>Statistics model in geojson response.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>statistics</td>
+      <td>object</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="task">Task</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>descr</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="tilejson">TileJSON</h4>
+
+<p>TileJSON model.</p>
+
+<p>Based on https://github.com/mapbox/tilejson-spec/tree/master/2.2.0</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tilejson</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>attribution</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>template</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>legend</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>scheme</td>
+      <td><a href="#schemeenum">SchemeEnum</a></td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>tiles</td>
+      <td>[ string ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>grids</td>
+      <td>[ string ]</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td>[ string ]</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>minzoom</td>
+      <td>integer</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>maxzoom</td>
+      <td>integer</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>bounds</td>
+      <td>[ number ]</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>center</td>
+      <td>[  ]</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="tilematrixsetname">TileMatrixSetName</h4>
+
+<p>An enumeration.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TileMatrixSetName</td>
+      <td> </td>
+      <td>An enumeration.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="validationerror">ValidationError</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>loc</td>
+      <td>[  ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>msg</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="geojson_pydantic__geometries__point">geojson_pydantic__geometries__Point</h4>
+
+<p>Point Model</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>coordinates</td>
+      <td> </td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="meta__dates__res">meta__dates__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dates</td>
+      <td>[ string ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="meta__list__res">meta__list__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>metas</td>
+      <td>[ <a href="#metares">MetaRes</a> ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="proc__list__res">proc__list__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>procs</td>
+      <td>[ <a href="#procres">ProcRes</a> ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="project__info__res">project__info__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>login</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>start_date</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>end_date</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>border</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>border_gj</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="project__list__res">project__list__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>projects</td>
+      <td>[ <a href="#project">Project</a> ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="project__new__params">project__new__Params</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>start_date</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>end_date</td>
+      <td>string</td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>border</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="project__new__res">project__new__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>project_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="rgb__list__res">rgb__list__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>product_ids</td>
+      <td>[ string ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="task__list__res">task__list__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tasks</td>
+      <td>[ <a href="#task">Task</a> ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="task__run__params">task__run__Params</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>task</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>string</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>project_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>params</td>
+      <td> </td>
+      <td> </td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="task__run__res">task__run__Res</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>event_id</td>
+      <td>integer</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="titiler__core__models__responses__point">titiler__core__models__responses__Point</h4>
+
+<p>Point model.</p>
+
+<p>response model for <code>/point</code> endpoints</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>coordinates</td>
+      <td>[ number ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>values</td>
+      <td>[ number ]</td>
+      <td> </td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+    </main>
+</div>
+<script src="/assets/js/zepto.min.js"></script>
+<script src="/assets/js/lunar.min.js"></script>
+<script src="/assets/js/prism.min.js"></script>
+<script src="/assets/js/database.js"></script>
+<script src="/assets/js/search.js"></script>
+<script src="/assets/js/mobile-navigation.js"></script>
+
+</body>
+</html>

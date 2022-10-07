@@ -1,2 +1,2 @@
 # altyntsev.github.io
-Hello
+Documentation at Github pages

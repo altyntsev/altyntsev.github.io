@@ -1,7 +1,15 @@
 window.database = {
   
     
-      
+    "404-html": {
+      "title": "404",
+      "category": "",
+      "content": "404Page not found :(The requested page could not be found.",
+      "url": "/404.html",
+      "href": "/404.html"
+    }
+    ,
+  
     
     "sputnik-en-descr-about-html": {
       "title": "sputnik",
@@ -166,6 +174,16 @@ window.database = {
   
     
       
+    
+    "resume-en-html": {
+      "title": "Altyntsev",
+      "category": "",
+      "content": "# Dmitriy Altyntsev### [altyntsev@gmail.com](mailto://altyntsev@gmail.com) ## Full stack developer with a lot of experience in automatic data processing.I think I would be most useful in processing research data. Relocation is possible andeven desirable.## Built up on my own number of automatic satellite data processing and GIS systems:- Irkutsk regional forest fire monitoring system- Baikal regional remote sensing center- Scanex operational remote sensing system- Ctrl2Go operational remote sensing system- Federal catalog of geological explorationThis includes task negotiation, architecture design, development of backend, API, intranetfrontend, frontend business logic, installation, deployment and maintenance. At the peakit was about 20 hosts at 7 locations. Own unique framework[alt_processing](/alt_proc/en/main.html)was developed for automatic data processing.## Main skills- Programming languages: **Python** (Pydantic), Javascript (Typescript), HTML, IDL- Databases: Postgresql, CouchDB- Libs: FastAPI, Cherrypy, Numpy- OS: Linux (Ubuntu), Windows- Clouds: AWS, Openstack- GIS: GDAL, PostGIS, Leaflet, QGIS- Remote Sensing: ENVI, MODIS, VIIRS, Sentinel-1, 2, 5, Landsat 5-9, USGS, Sentinel Hub,  SNAP, CSPP- Soft skills: sociability, responsibility, broad outlook and experience in natural  science and engineering, ability to solve problems in most simple way with minimum  number of used technologies, ability and desire to learn new things## Education- Novosibirsk State University (NSU), Physics Department - The Novosibirsk Specialized Scientific Center on Physics, Mathematics## One more thing:- The winner of the physics Irkutsk region olympics- Twice Irkutsk region governor prize winner for developing the region's forest fire  monitoring system - After university I have been working for several years as an electronic engineer  developing both analog and digital devices## Links:- [github](https://github.com/altyntsev){:target=\"_blank\"}- [scanex](https://www.scanex.ru/en/?setlang=en){:target=\"_blank\"}- [izuch](http://geol.irk.ru/izuch/search/?x=105.00732&y=54.04004&z=6&cols=n&tgf=%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9&sc=10~25~50&vid=%D0%93%D0%B5%D0%BE%D1%84%D0%B8%D0%B7%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F&nom=N-48){:target=\"_blank\"}- [sputnik](http://sputnik.irk.ru/main/bpt/date/?date=2022-09-11){:target=\"_blank\"}",
+      "url": "/resume/en.html",
+      "href": "/resume/en.html"
+    }
+    ,
+  
     
     "alt-proc-ru-admin-faq-html": {
       "title": "alt_proc",
@@ -355,6 +373,16 @@ window.database = {
       "content": "# NavigationThe navigation supports especially only one level. If you need deep nested structures you propably should use a larger documentation system like [GitBook](https://www.gitbook.com/).## Adding a Page to NavigationNot every page by default is part of the navigation. If you want to add a page to the navigation you have to add the `navigation` attribute with a desired `index`:```---layout: pagetitle: Navigationnavigation: 2---```The navigation `index` is starting with 1 representing the first item. ",
       "url": "/navigation.html",
       "href": "/navigation.html"
+    }
+    ,
+  
+    
+    "resume-ru-html": {
+      "title": "Altyntsev",
+      "category": "",
+      "content": "# Алтынцев Дмитрий Александрович### [altyntsev@gmail.com](mailto://altyntsev@gmail.com) ## Full-stack разработчик с большим опытом самостоятельной работы в области автоматической обработки данных.Буду наиболее полезен в области обработки исследовательских данных. Возможна и дажежелательна релокация.В основном занимался разработкой и обслуживанием систем автоматической обработки открытыхспутниковых данных ДЗЗ и веб гео-информационными системами.## Были разработаны следующие основные системы:- Региональная система мониторинга лесных пожаров Иркутской области- Региональная система спутникового мониторинга Байкальский Центр- Система автоматической обработки спутниковых данных Сканэкс- Система автоматической обработки спутниковых данных Ctrl2Go- Федеральный каталог геологической изученности Полностью самостоятельно выполнял следующие работы: согласование задачи, разработкаархитектуры, разработка бэкэнда и API, разработка административного фронтенда, разработкабизнес-логики публичного фронтенда, инсталляция и поддержка системы. В пике обслуживал до20 серверов с собственным программным обеспечением в 7 локациях. Для организацииавтоматической обработки был разработан собственный фреймворк [alt_processing](/alt_proc/en/main.html).## Основные компетенции:- ЯП: **Python** (Pydantic), Javascript (Typescript), HTML, IDL- БД: Postgresql, CouchDB- Библиотеки: FastAPI, Cherrypy, Numpy- OS: Linux (Ubuntu), Windows- Хостинг: AWS, Openstack- ГИС: GDAL, PostGIS, Leaflet, QGIS- ДЗЗ: ENVI, MODIS, VIIRS, Sentinel-1, 2, 5, Landsat 5-9, USGS, Sentinel Hub, SNAP, CSPP- Soft skills: коммуникабельность, ответственность, широкий кругозор в естественных науках  и инженерии, умение решать задачу максимально просто с использованием минимального  количества задействованных технологий, желание и умение учиться новому.- Английский: advanced## Образование:- Новосибирский государственный университет (НГУ), физический факультет, кафедра автоматизации физико-технических исследований - Новосибирская физико-математическая школа (ФМШ)## Прочее:- 1 место на Иркутской областной олимпиаде по физике.- Дважды лауреат премии губернатора Иркутской области за создание региональной системы  мониторинга лесных пожаров.- По окончании университета несколько лет занимался разработкой измерительной  радиоэлектронной аппаратуры - от входных цепей до программирования микропроцессоров.## Ссылки:- [github](https://github.com/altyntsev){:target=\"_blank\"}- [scanex](https://www.scanex.ru/en/?setlang=en){:target=\"_blank\"}- [izuch](http://geol.irk.ru/izuch/search/?x=105.00732&y=54.04004&z=6&cols=n&tgf=%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9&sc=10~25~50&vid=%D0%93%D0%B5%D0%BE%D1%84%D0%B8%D0%B7%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F&nom=N-48){:target=\"_blank\"}- [sputnik](http://sputnik.irk.ru/main/bpt/date/?date=2022-09-11){:target=\"_blank\"}",
+      "url": "/resume/ru.html",
+      "href": "/resume/ru.html"
     }
     ,
   

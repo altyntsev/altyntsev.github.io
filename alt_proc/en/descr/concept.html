@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>alt_proc</title>
+  <meta name="description" content="Documentation for small projects">
+
+	<link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="canonical" href="http://0.0.0.0:2002/alt_proc/en/descr/concept.html">
+
+	<link rel="stylesheet" href="/assets/css/docs.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <sidebar class="sidebar" id="sidebar">
+        <ul class="navigation" id="navigation">
+            <li><a class="active" href="/">
+                root
+            </a></li>
+            <li><a class="active" href="/alt_proc/ru/main.html">
+                alt_processing (ru)
+            </a></li>
+            <li><a class="active" href="/alt_proc/en/main.html">
+                alt_processing (en)
+            </a></li>
+            <li><a class="active" href="/sputnik/ru/main.html">
+                sputnik (ru)
+            </a></li>
+            <li><a class="active" href="/sputnik/en/main.html">
+                sputnik (en)
+            </a></li>
+        </ul>
+    </sidebar>
+    <main class="content">
+        <div class="inner">
+            <h1 id="концепция">Концепция</h1>
+
+<!--
+- блоки, блок-схема
+- блоки делятся по смыслу, технологической необходимости, перезапуск
+- блоки соединяются графом - ветвление, параллелизация, цикл 
+- рождалась в результате практической эксплуатации
+- сначала усложнялась, потом упрощалась
+- главное - простота
+- при должном навыке можно получить желаемый функционал 
+-->
+
+<p>Задача обработки данных обычно разбивается на функциональные блоки, связи между
+которыми формируют алгоритмический граф обработки данных. Если этот граф
+достаточно простой и состоит в основном из последовательных цепочек блоков с
+небольшим кол-вом ветвлений, то можно значительно упростить код планировщика и
+наглядность интерфейса администратора. Многолетний опыт показывает, что
+концептуально простую Систему обслуживать гораздо проще.</p>
+
+<p>Давайте рассмотрим типичные примеры алгоритмических графов, которые можно
+реализовать в alt_processing.</p>
+
+<hr />
+<p><img src="../../img/concept/basic.svg" alt="" />
+Простой вариант цепочки Скриптов по Событию.</p>
+
+<hr />
+<p><img src="../../img/concept/periodic.svg" alt="" />
+Скрипт периодической Задачи при обнаружении новых данных генерирует События на
+обработку. События могут быть одной Задачи или разных для разных типов данных.
+События могут обрабатываться параллельно при наличии ресурсов.</p>
+
+<hr />
+<p><img src="../../img/concept/restart.svg" alt="" />
+Один из Скриптов перезапускается до тех пор, пока не выполнится условие.
+Например, до тех пор пока какая-нибудь операция (например, сетевой запрос) не
+выполнится успешно.</p>
+
+<hr />
+<p><img src="../../img/concept/sub_procs.svg" alt="" />
+Первичная Задача состоит из трех Скриптов. Первый Скрипт анализирует параметры и
+генерирует События вторичной Задачи, которые обрабатываются параллельно. Второй
+Скрипт первичной Задачи, перезапускаясь, ждет окончания Обработок вторичной
+Задачи. По окончанию вторичных Обработок третий Скрипт завершает Обработку 
+агрегируя результаты вторичных Обработок.</p>
+
+
+        </div>
+    </main>
+</div>
+<script src="/assets/js/zepto.min.js"></script>
+<script src="/assets/js/lunar.min.js"></script>
+<script src="/assets/js/prism.min.js"></script>
+<script src="/assets/js/database.js"></script>
+<script src="/assets/js/search.js"></script>
+<script src="/assets/js/mobile-navigation.js"></script>
+
+</body>
+</html>

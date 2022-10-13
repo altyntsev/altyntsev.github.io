@@ -51,12 +51,32 @@ window.database = {
     ,
   
     
+    "alt-proc-en-descr-alternatives-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "АльтернативыВ общем и целом, существующие способы подобной автоматизации можно разбить надва вида. Один вид - это простые периодические планировщики (например, cron) и какие-то средства запуска и передачи параметров (например, bash скрипты). Мониторингосуществляется анализаторами логов и отправкой сообщений. По сравнению с этимподходом alt_processing при такой же простоте предоставляет больший функционал иудобство в работе.Второй способ - это использование больших, мощных и сложных пакетов дляавтоматизации и деплоймента. Таких как celery, airflow, kubernetes. И этооказывается избыточным для небольших систем с небольшим кол-вом серверов инагрузки, а процесс отладки не такой непосредственный как в alt_processing.",
+      "url": "/alt_proc/en/descr/alternatives.html",
+      "href": "/alt_proc/en/descr/alternatives.html"
+    }
+    ,
+  
+    
     "alt-proc-ru-descr-alternatives-html": {
       "title": "alt_proc",
       "category": "",
       "content": "АльтернативыВ общем и целом, существующие способы подобной автоматизации можно разбить надва вида. Один вид - это простые периодические планировщики (например, cron) и какие-то средства запуска и передачи параметров (например, bash скрипты). Мониторингосуществляется анализаторами логов и отправкой сообщений. По сравнению с этимподходом alt_processing при такой же простоте предоставляет больший функционал иудобство в работе.Второй способ - это использование больших, мощных и сложных пакетов дляавтоматизации и деплоймента. Таких как celery, airflow, kubernetes. И этооказывается избыточным для небольших систем с небольшим кол-вом серверов инагрузки, а процесс отладки не такой непосредственный как в alt_processing.",
       "url": "/alt_proc/ru/descr/alternatives.html",
       "href": "/alt_proc/ru/descr/alternatives.html"
+    }
+    ,
+  
+    
+    "sputnik-en-dev-api-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "FastAPIVersion: 0.1.0/project/newPOSTSummary:Save projectDescription:    Description: Save project to databaseResponses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /project/listGETSummary:Project listResponses            Code      Description                  200      Successful Response      Security            Security Schema      Scopes                  HTTPBasic             /project/infoGETSummary:Project infoParameters            Name      Located in      Description      Required      Schema                  project_id      query             Yes      integer      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /task/listGETSummary:Task listResponses            Code      Description                  200      Successful Response      Security            Security Schema      Scopes                  HTTPBasic             /task/runPOSTSummary:Run processingResponses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /proc/listGETSummary:Processing listParameters            Name      Located in      Description      Required      Schema                  project_id      query             Yes      integer      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /meta/listGETSummary:Scenes metadata for dateParameters            Name      Located in      Description      Required      Schema                  project_id      query             Yes      integer              date      query             Yes      string      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /meta/datesGETSummary:Date list of available metadataParameters            Name      Located in      Description      Required      Schema                  project_id      query             Yes      integer      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /rgb/listGETSummary:Scenes metadata for dateParameters            Name      Located in      Description      Required      Schema                  project_id      query             Yes      integer      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /rgb/tile/{project_id}/{product_id}/{z}/{x}/{y}GETSummary:Get tileParameters            Name      Located in      Description      Required      Schema                  project_id      path             Yes      integer              product_id      path             Yes      string              z      path             Yes      integer              x      path             Yes      integer              y      path             Yes      integer      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/boundsGETSummary:BoundsDescription:Return the bounds of the COG.Parameters            Name      Located in      Description      Required      Schema                  url      query      Dataset URL      Yes      string      Responses            Code      Description                  200      Return dataset’s bounds.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/infoGETSummary:InfoDescription:Return dataset’s basic info.Parameters            Name      Located in      Description      Required      Schema                  url      query      Dataset URL      Yes      string      Responses            Code      Description                  200      Return dataset’s basic info.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/info.geojsonGETSummary:Info GeojsonDescription:Return dataset’s basic info as a GeoJSON feature.Parameters            Name      Located in      Description      Required      Schema                  url      query      Dataset URL      Yes      string      Responses            Code      Description                  200      Return dataset’s basic info as a GeoJSON feature.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/statisticsGETSummary:StatisticsDescription:Create image from a geojson feature.Parameters            Name      Located in      Description      Required      Schema                  url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              height      query      Force output image height.      No      integer              width      query      Force output image width.      No      integer              categorical      query      Return statistics for categorical dataset.      No      boolean              c      query      List of values for which to report counts.      No      [  ]              p      query      List of percentile values.      No      [ integer ]              histogram_bins      query      Defines the number of equal-width bins in the given range (10, by default).  If bins is a sequence (comma , delimited values), it defines a monotonically increasing array of bin edges, including the rightmost edge, allowing for non-uniform bin widths.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html      No      string              histogram_range      query      Comma , delimited range of the bins.  The lower and upper range of the bins. If not provided, range is simply (a.min(), a.max()).  Values outside the range are ignored. The first element of the range must be less than or equal to the second. range affects the automatic bin computation as well.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html      No      string      Responses            Code      Description                  200      Return dataset’s statistics.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             POSTSummary:Geojson StatisticsDescription:Get Statistics from a geojson feature or featureCollection.Parameters            Name      Located in      Description      Required      Schema                  url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              height      query      Force output image height.      No      integer              width      query      Force output image width.      No      integer              categorical      query      Return statistics for categorical dataset.      No      boolean              c      query      List of values for which to report counts.      No      [  ]              p      query      List of percentile values.      No      [ integer ]              histogram_bins      query      Defines the number of equal-width bins in the given range (10, by default).  If bins is a sequence (comma , delimited values), it defines a monotonically increasing array of bin edges, including the rightmost edge, allowing for non-uniform bin widths.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html      No      string              histogram_range      query      Comma , delimited range of the bins.  The lower and upper range of the bins. If not provided, range is simply (a.min(), a.max()).  Values outside the range are ignored. The first element of the range must be less than or equal to the second. range affects the automatic bin computation as well.  link: https://numpy.org/doc/stable/reference/generated/numpy.histogram.html      No      string      Responses            Code      Description                  200      Return dataset’s statistics.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}@{scale}x.{format}GETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              scale      path             Yes      integer              format      path             Yes      ImageType              TileMatrixSetId      path             Yes      TileMatrixSetName              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}@{scale}xGETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              scale      path             Yes      integer              TileMatrixSetId      path             Yes      TileMatrixSetName              format      query      Output image type. Default is auto.      No      ImageType              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}.{format}GETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              format      path             Yes      ImageType              TileMatrixSetId      path             Yes      TileMatrixSetName              scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{TileMatrixSetId}/{z}/{x}/{y}GETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              TileMatrixSetId      path             Yes      TileMatrixSetName              scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              format      query      Output image type. Default is auto.      No      ImageType              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{z}/{x}/{y}@{scale}x.{format}GETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              scale      path             Yes      integer              format      path             Yes      ImageType              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              TileMatrixSetId      query      TileMatrixSet Name (default: ‘WebMercatorQuad’)      No      TileMatrixSetName              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{z}/{x}/{y}@{scale}xGETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              scale      path             Yes      integer              format      query      Output image type. Default is auto.      No      ImageType              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              TileMatrixSetId      query      TileMatrixSet Name (default: ‘WebMercatorQuad’)      No      TileMatrixSetName              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{z}/{x}/{y}.{format}GETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              format      path             Yes      ImageType              scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              TileMatrixSetId      query      TileMatrixSet Name (default: ‘WebMercatorQuad’)      No      TileMatrixSetName              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tiles/{z}/{x}/{y}GETSummary:TileDescription:Create map tile from a dataset.Parameters            Name      Located in      Description      Required      Schema                  z      path      TMS tiles’s zoom level      Yes      integer              x      path      TMS tiles’s column      Yes      integer              y      path      TMS tiles’s row      Yes      integer              scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              format      query      Output image type. Default is auto.      No      ImageType              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              TileMatrixSetId      query      TileMatrixSet Name (default: ‘WebMercatorQuad’)      No      TileMatrixSetName              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/{TileMatrixSetId}/tilejson.jsonGETSummary:TilejsonDescription:Return TileJSON document for a dataset.Parameters            Name      Located in      Description      Required      Schema                  TileMatrixSetId      path             Yes      TileMatrixSetName              tile_format      query      Output image type. Default is auto.      No      ImageType              tile_scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              minzoom      query      Overwrite default minzoom.      No      integer              maxzoom      query      Overwrite default maxzoom.      No      integer              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return a tilejson              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/tilejson.jsonGETSummary:TilejsonDescription:Return TileJSON document for a dataset.Parameters            Name      Located in      Description      Required      Schema                  tile_format      query      Output image type. Default is auto.      No      ImageType              tile_scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              minzoom      query      Overwrite default minzoom.      No      integer              maxzoom      query      Overwrite default maxzoom.      No      integer              buffer      query      Buffer on each side of the given tile. It must be a multiple of 0.5. Output tilesize will be expanded to tilesize + 2 * tile_buffer (e.g 0.5 = 257x257, 1.0 = 258x258).      No      number              TileMatrixSetId      query      TileMatrixSet Name (default: ‘WebMercatorQuad’)      No      TileMatrixSetName              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return a tilejson              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/{TileMatrixSetId}/WMTSCapabilities.xmlGETSummary:WmtsDescription:OGC WMTS endpoint.Parameters            Name      Located in      Description      Required      Schema                  TileMatrixSetId      path             Yes      TileMatrixSetName              tile_format      query      Output image type. Default is png.      No      ImageType              tile_scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              minzoom      query      Overwrite default minzoom.      No      integer              maxzoom      query      Overwrite default maxzoom.      No      integer              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/WMTSCapabilities.xmlGETSummary:WmtsDescription:OGC WMTS endpoint.Parameters            Name      Located in      Description      Required      Schema                  tile_format      query      Output image type. Default is png.      No      ImageType              tile_scale      query      Tile size scale. 1=256x256, 2=512x512…      No      integer              minzoom      query      Overwrite default minzoom.      No      integer              maxzoom      query      Overwrite default maxzoom.      No      integer              TileMatrixSetId      query      TileMatrixSet Name (default: ‘WebMercatorQuad’)      No      TileMatrixSetName              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Successful Response              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/point/{lon},{lat}GETSummary:PointDescription:Get Point value for a dataset.Parameters            Name      Located in      Description      Required      Schema                  lon      path      Longitude      Yes      number              lat      path      Latitude      Yes      number              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName      Responses            Code      Description                  200      Return a value for a point              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/preview.{format}GETSummary:PreviewDescription:Create preview of a dataset.Parameters            Name      Located in      Description      Required      Schema                  format      path             Yes      ImageType              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              height      query      Force output image height.      No      integer              width      query      Force output image width.      No      integer              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/previewGETSummary:PreviewDescription:Create preview of a dataset.Parameters            Name      Located in      Description      Required      Schema                  format      query      Output image type. Default is auto.      No      ImageType              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              height      query      Force output image height.      No      integer              width      query      Force output image width.      No      integer              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/crop/{minx},{miny},{maxx},{maxy}/{width}x{height}.{format}GETSummary:PartDescription:Create image from part of a dataset.Parameters            Name      Located in      Description      Required      Schema                  minx      path      Bounding box min X      Yes      number              miny      path      Bounding box min Y      Yes      number              maxx      path      Bounding box max X      Yes      number              maxy      path      Bounding box max Y      Yes      number              format      path             Yes      ImageType              height      path             Yes      integer              width      path             Yes      integer              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/crop/{minx},{miny},{maxx},{maxy}.{format}GETSummary:PartDescription:Create image from part of a dataset.Parameters            Name      Located in      Description      Required      Schema                  minx      path      Bounding box min X      Yes      number              miny      path      Bounding box min Y      Yes      number              maxx      path      Bounding box max X      Yes      number              maxy      path      Bounding box max Y      Yes      number              format      path             Yes      ImageType              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              height      query      Force output image height.      No      integer              width      query      Force output image width.      No      integer              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/crop/{width}x{height}.{format}POSTSummary:Geojson CropDescription:Create image from a geojson feature.Parameters            Name      Located in      Description      Required      Schema                  format      path             Yes      ImageType              height      path             Yes      integer              width      path             Yes      integer              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/crop.{format}POSTSummary:Geojson CropDescription:Create image from a geojson feature.Parameters            Name      Located in      Description      Required      Schema                  format      path             Yes      ImageType              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              height      query      Force output image height.      No      integer              width      query      Force output image width.      No      integer              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /cog/cropPOSTSummary:Geojson CropDescription:Create image from a geojson feature.Parameters            Name      Located in      Description      Required      Schema                  format      query      Output image type. Default is auto.      No      ImageType              url      query      Dataset URL      Yes      string              bidx      query      Dataset band indexes      No      [ integer ]              expression      query      rio-tiler’s band math expression      No      string              nodata      query      Overwrite internal Nodata value      No                     unscale      query      Apply internal Scale/Offset      No      boolean              resampling      query      Resampling method.      No      ResamplingName              max_size      query      Maximum image size to read onto.      No      integer              height      query      Force output image height.      No      integer              width      query      Force output image width.      No      integer              rescale      query      comma (‘,’) delimited Min,Max range. Can set multiple time for multiple bands.      No      [ string ]              color_formula      query      rio-color formula (info: https://github.com/mapbox/rio-color)      No      string              colormap_name      query      Colormap name      No      ColorMapName              colormap      query      JSON encoded custom Colormap      No      string              return_mask      query      Add mask to the output data.      No      boolean      Responses            Code      Description                  200      Return an image.              422      Validation Error      Security            Security Schema      Scopes                  HTTPBasic             /GETSummary:RootResponses            Code      Description                  200      Successful Response      Security            Security Schema      Scopes                  HTTPBasic             ModelsBandStatisticsImage statistics            Name      Type      Description      Required                  min      number             Yes              max      number             Yes              mean      number             Yes              count      number             Yes              sum      number             Yes              std      number             Yes              median      number             Yes              majority      number             Yes              minority      number             Yes              unique      number             Yes              histogram      [ [  ] ]             Yes              valid_percent      number             Yes              masked_pixels      number             Yes              valid_pixels      number             Yes      BoundingBox            Name      Type      Description      Required                  left                    Yes              bottom                    Yes              right                    Yes              top                    Yes      BoundsDataset Bounding box            Name      Type      Description      Required                  bounds      [  ]             Yes      ColorMapNameAn enumeration.            Name      Type      Description      Required                  ColorMapName             An enumeration.             FeatureFeature Model            Name      Type      Description      Required                  type      string             No              geometry                    No              properties      object             No              id      string             No              bbox                    No      FeatureCollectionFeatureCollection Model            Name      Type      Description      Required                  type      string             No              features      [ Feature ]             Yes              bbox                    No      FeatureCollection_Union_geojson_pydantic.geometries.Point__geojson_pydantic.geometries.MultiPoint__geojson_pydantic.geometries.LineString__geojson_pydantic.geometries.MultiLineString__geojson_pydantic.geometries.Polygon__geojson_pydantic.geometries.MultiPolygon__StatisticsInGeoJSONFeatureCollection Model            Name      Type      Description      Required                  type      string             No              features      [ Feature_Union_geojson_pydantic.geometries.Point__geojson_pydantic.geometries.MultiPoint__geojson_pydantic.geometries.LineString__geojson_pydantic.geometries.MultiLineString__geojson_pydantic.geometries.Polygon__geojson_pydantic.geometries.MultiPolygon__StatisticsInGeoJSON ]             Yes              bbox                    No      Feature_Polygon__Info_Feature Model            Name      Type      Description      Required                  type      string             No              geometry      Polygon             No              properties      Info             No              id      string             No              bbox                    No      Feature_Union_geojson_pydantic.geometries.Point__geojson_pydantic.geometries.MultiPoint__geojson_pydantic.geometries.LineString__geojson_pydantic.geometries.MultiLineString__geojson_pydantic.geometries.Polygon__geojson_pydantic.geometries.MultiPolygon__StatisticsInGeoJSONFeature Model            Name      Type      Description      Required                  type      string             No              geometry                    No              properties      StatisticsInGeoJSON             No              id      string             No              bbox                    No      HTTPValidationError            Name      Type      Description      Required                  detail      [ ValidationError ]             No      ImageTypeAvailable Output image type.            Name      Type      Description      Required                  ImageType      string      Available Output image type.             InfoDataset Info.            Name      Type      Description      Required                  bounds      [  ]             Yes              minzoom      integer             Yes              maxzoom      integer             Yes              band_metadata      [ [  ] ]             Yes              band_descriptions      [ [  ] ]             Yes              dtype      string             Yes              nodata_type      NodataTypes             Yes              colorinterp      [ string ]             No              scale      number             No              offset      number             No              colormap      object             No      LineStringLineString Model            Name      Type      Description      Required                  coordinates      [  ]             Yes              type      string             No      MetaRes            Name      Type      Description      Required                  project_id      integer             Yes              scene_id      string             Yes              date      string             Yes              border      binary             Yes              filename      string             Yes              xg0      number             Yes              xg1      number             Yes              yg0      number             Yes              yg1      number             Yes              border_gj      string             Yes      MultiLineStringMultiLineString Model            Name      Type      Description      Required                  coordinates      [ [  ] ]             Yes              type      string             No      MultiPointMultiPoint Model            Name      Type      Description      Required                  coordinates      [  ]             Yes              type      string             No      MultiPolygonMultiPolygon Model            Name      Type      Description      Required                  coordinates      [ [ [  ] ] ]             Yes              type      string             No      NodataTypesrio-tiler Nodata types.            Name      Type      Description      Required                  NodataTypes      string      rio-tiler Nodata types.             PolygonPolygon Model            Name      Type      Description      Required                  coordinates      [ [  ] ]             Yes              type      string             No      ProcRes            Name      Type      Description      Required                  event_id      integer             Yes              status      string             No              result      string             No              params                    No              task_id      integer             Yes              ctime      dateTime             Yes              proc_id      integer             Yes              task      string             No              title      string             No              scripts      [ ScriptRes ]             No      Project            Name      Type      Description      Required                  project_id      integer             Yes              login      string             Yes              name      string             Yes              start_date      string             No              end_date      string             No              border      string             Yes      ResamplingNameAn enumeration.            Name      Type      Description      Required                  ResamplingName             An enumeration.             SchemeEnumTileJSON scheme choice.            Name      Type      Description      Required                  SchemeEnum      string      TileJSON scheme choice.             ScriptRes            Name      Type      Description      Required                  proc_id      integer             Yes              iscript      integer             Yes              name      string             Yes              status      string             No              result      string             No      StatisticsInGeoJSONStatistics model in geojson response.            Name      Type      Description      Required                  statistics      object             Yes      Task            Name      Type      Description      Required                  name      string             Yes              descr      string             Yes      TileJSONTileJSON model.Based on https://github.com/mapbox/tilejson-spec/tree/master/2.2.0            Name      Type      Description      Required                  tilejson      string             No              name      string             No              description      string             No              version      string             No              attribution      string             No              template      string             No              legend      string             No              scheme      SchemeEnum             No              tiles      [ string ]             Yes              grids      [ string ]             No              data      [ string ]             No              minzoom      integer             No              maxzoom      integer             No              bounds      [ number ]             No              center      [  ]             No      TileMatrixSetNameAn enumeration.            Name      Type      Description      Required                  TileMatrixSetName             An enumeration.             ValidationError            Name      Type      Description      Required                  loc      [  ]             Yes              msg      string             Yes              type      string             Yes      geojson_pydantic__geometries__PointPoint Model            Name      Type      Description      Required                  coordinates                    Yes              type      string             No      meta__dates__Res            Name      Type      Description      Required                  dates      [ string ]             Yes      meta__list__Res            Name      Type      Description      Required                  metas      [ MetaRes ]             Yes      proc__list__Res            Name      Type      Description      Required                  procs      [ ProcRes ]             Yes      project__info__Res            Name      Type      Description      Required                  project_id      integer             Yes              login      string             Yes              name      string             Yes              start_date      string             No              end_date      string             No              border      string             Yes              border_gj      string             Yes      project__list__Res            Name      Type      Description      Required                  projects      [ Project ]             Yes      project__new__Params            Name      Type      Description      Required                  name      string             Yes              start_date      string             No              end_date      string             No              border      string             Yes      project__new__Res            Name      Type      Description      Required                  project_id      integer             Yes      rgb__list__Res            Name      Type      Description      Required                  product_ids      [ string ]             Yes      task__list__Res            Name      Type      Description      Required                  tasks      [ Task ]             Yes      task__run__Params            Name      Type      Description      Required                  task      string             Yes              title      string             Yes              project_id      integer             Yes              params                    No      task__run__Res            Name      Type      Description      Required                  event_id      integer             Yes      titiler__core__models__responses__PointPoint model.response model for /point endpoints            Name      Type      Description      Required                  coordinates      [ number ]             Yes              values      [ number ]             Yes      ",
+      "url": "/sputnik/en/dev/api.html",
+      "href": "/sputnik/en/dev/api.html"
     }
     ,
   
@@ -71,12 +91,32 @@ window.database = {
     ,
   
     
+    "sputnik-en-dev-architecture-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "АрхитектураSputnik APIИнтерфейс взаимодействия с остальными частями Системы.  получает команды от административного интерфейса  формирует задания на обработку системе alt_proc  формирует продукты для показа в Web GISDB (База Данных)База Данных для хранения данных проектов  данные проекта  метаданные сцен  метаданные продуктовStorage (Хранилище)Хранилище файлов  исходных данных  готовых продуктов  объемных временных файловWeb UIАдминистративных веб интерфейсWeb GISКартографическая часть веб интерфейсаalt_procСистема alt_processing - Система автоматизации обработкиВключает в себя API для взаимодействия и проекты, содержащие скрипты для выполнения обработки. Готовые продукты обработки записываются в Хранилище.",
+      "url": "/sputnik/en/dev/architecture.html",
+      "href": "/sputnik/en/dev/architecture.html"
+    }
+    ,
+  
+    
     "sputnik-ru-dev-architecture-html": {
       "title": "sputnik",
       "category": "",
       "content": "АрхитектураSputnik APIИнтерфейс взаимодействия с остальными частями Системы.  получает команды от административного интерфейса  формирует задания на обработку системе alt_proc  формирует продукты для показа в Web GISDB (База Данных)База Данных для хранения данных проектов  данные проекта  метаданные сцен  метаданные продуктовStorage (Хранилище)Хранилище файлов  исходных данных  готовых продуктов  объемных временных файловWeb UIАдминистративных веб интерфейсWeb GISКартографическая часть веб интерфейсаalt_procСистема alt_processing - Система автоматизации обработкиВключает в себя API для взаимодействия и проекты, содержащие скрипты для выполнения обработки. Готовые продукты обработки записываются в Хранилище.",
       "url": "/sputnik/ru/dev/architecture.html",
       "href": "/sputnik/ru/dev/architecture.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-descr-bad-for-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "Для каких систем точно НЕ подходитНе подходит в принципе  для систем реального времени (нет механизмов)  для большого кол-во “легких” скриптов (большие накладные расходы на запуск скрипта)  со сложной структурой обработки со множеством ветвлений (концепция другая)",
+      "url": "/alt_proc/en/descr/bad_for.html",
+      "href": "/alt_proc/en/descr/bad_for.html"
     }
     ,
   
@@ -91,12 +131,32 @@ window.database = {
     ,
   
     
+    "alt-proc-en-descr-basic-usage-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "Basic usageLet’s suppose that you have developed a number of simple Python scripts that do someuseful data processing. For example, the first script requests satellite metadata fromprovider by certain parameters. Then other scripts load data, calibrate it, produce RGBimage and download it to the site storage. Each of these scripts is developed separatelyand can be easily debugged. Intermediate files that used by several scripts could beformed during the processing. Everything seems to be working fine manually but theproduction needs to be automated. In such cases, alt_processing comes to the rescue.Two tasks are configured:  Periodic Task includes a script, that discovers new data and generates the Eventfor each new satellite scene with its parameters.  Event Task includes a chain of scripts that process new scene: load, calibrate, formRGB image, and deliver results.What is important is that only slight modification of existing scripts is needed.Everything is working the same way it would work during a manual process.For each Event the Launcher automatically creates Processing as chain ofScripts, makes temporary working directories for the whole Processing and each Script, run Scripts in sequence according to available resources, rerun Script in thecase of a soft error, delete temporary directories after execution to keep required amountof free space. User web interface shows the status of Processings, gathers statistic ofsuccess and failures, allows to manually rerun certain Processing and Scripts, pausesTasks and much more. The same functions could be done via API and even from running Scriptthat gives utter control over processing features.System starts working but as always something goes wrong sometimes. For example one of theScript fails from time to time and log file does not help much. In this case beforetemporary directory is not deleted there is an opportunity to run and debug failed Scriptin the terminal. This speeds up development and debug process simultaneous with Systemproduction exploitation.",
+      "url": "/alt_proc/en/descr/basic_usage.html",
+      "href": "/alt_proc/en/descr/basic_usage.html"
+    }
+    ,
+  
+    
     "alt-proc-ru-descr-basic-usage-html": {
       "title": "alt_proc",
       "category": "",
       "content": "Базовый пример использованияПредположим, что вы написали набор простых скриптов на Питоне, который делаютчто-то полезное. Например, один скрипт загружает список спутниковых данных позаданным параметрам. Другие скрипты загружают данные, калибруют, формируютцветное изображение, загружают результат в хранилище. Каждый из скриптовразрабатывается отдельно и легко отлаживается. В процессе работы скриптовобразуются временные файлы, часть из которых могут использоваться междускриптами. Все уже вроде бы неплохо работает в ручном режиме и естьнеобходимость это автоматизировать. Вот тут на помощь и приходит alt_processing.Конфигурируется две Задачи:  Периодическая Задача состоит из Скрипта, который обнаруживает новые данные и длякаждой новой сцены создает Событие с параметрами новой сцены.  И обрабатывающая Задача, которая состоит из последовательности Скриптовзагрузки, калибровки, подготовки изображения и загрузки результатов на сервер.При этом сами Скрипты почти не требуют изменений, все происходит точно так жекак если бы Скрипты запускались вручную.Для каждого События (спутниковой сцены) Система автоматически создает Обработку(последовательность Скриптов), временную общую рабочую директорию, рабочиедиректории для каждого Скрипта, запускает Скрипты, перезапускает в случаеустранимой ошибки, удаляет использованные временные директории поддерживаязаданное кол-во свободного места. Пользовательский веб интерфейс позволяетмониторить что происходит в Системе, что исполняется сейчас, сколько выполнилосьсегодня успешно, сколько с ошибками. Позволяет задать сколько Обработок дляданной Задачи может выполняться одновременно, поставить Задачу на паузу, удалитьОбработку, перезапустить один Скрипт или всю Обработку. Все то же самое можноделать с помощью API изнутри Скрипта, что дает большую гибкость, если этонеобходимо.Система начала работать, но как всегда, что-то иногда идет не так. Например,один из Скриптов время от времени падает, а по логу непонятно чтопроисходит. В этом случае есть возможность зайти во временную директориюскрипта (пока она не удалена), запустить и отладить сбойный Скрипт в терминале вокружении, приводящим к ошибке. Это сильно упрощает и ускоряет процесс разработки и отладки при одновременной штатной эксплуатации вашей системы.",
       "url": "/alt_proc/ru/descr/basic_usage.html",
       "href": "/alt_proc/ru/descr/basic_usage.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-descr-components-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "Компоненты системы автоматизацииLauncher (Планировщик)Главный сервис фреймворка, который в бесконечном цикле:  обновляет информацию о статусе работающих Обработок и Скриптов  на основе анализа этой информации определяет следующий Скрипт для запуска  запускает Скрипт с параметрами События  исполняет команды управленияБаза Данных (Database)  хранит всю информацию о конфигурации и текущем состоянии Системы  передает команды от API ПланировщикуProjects Scripts (Проекты и Скрипты)Пользовательские папки со Скриптами. Не являются часть фреймворка, но должнысоответствовать заданной структуре.APIИнтерфейс внешнего взаимодействия с фреймворком.Web UIАдминистративный веб интерфейс взаимодействия с фреймворком.",
+      "url": "/alt_proc/en/descr/components.html",
+      "href": "/alt_proc/en/descr/components.html"
     }
     ,
   
@@ -111,12 +171,32 @@ window.database = {
     ,
   
     
+    "sputnik-en-descr-concept-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "Концепция СистемыРабота с Системой организована на основе пользовательских проектов.При создании проекта пользователь указывает уникальное имя, границы региона и интересующий интервал времени.Далее пользователь получает возможность:  запускать Обработки  просматривать результаты Обработки  выгружать результаты ОбработкиОбработки могут быть в принципе любой последовательностью скриптов Питона и выполняются они c помощью фреймворка alt_processing.Просмотр результатов основан на модульной веб ГИС и также может быть модернизирован под специфические задачи.",
+      "url": "/sputnik/en/descr/concept.html",
+      "href": "/sputnik/en/descr/concept.html"
+    }
+    ,
+  
+    
     "sputnik-ru-descr-concept-html": {
       "title": "sputnik",
       "category": "",
       "content": "Концепция СистемыРабота с Системой организована на основе пользовательских проектов.При создании проекта пользователь указывает уникальное имя, границы региона и интересующий интервал времени.Далее пользователь получает возможность:  запускать Обработки  просматривать результаты Обработки  выгружать результаты ОбработкиОбработки могут быть в принципе любой последовательностью скриптов Питона и выполняются они c помощью фреймворка alt_processing.Просмотр результатов основан на модульной веб ГИС и также может быть модернизирован под специфические задачи.",
       "url": "/sputnik/ru/descr/concept.html",
       "href": "/sputnik/ru/descr/concept.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-descr-concept-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "КонцепцияЗадача обработки данных обычно разбивается на функциональные блоки, связи междукоторыми формируют алгоритмический граф обработки данных. Если этот графдостаточно простой и состоит в основном из последовательных цепочек блоков снебольшим кол-вом ветвлений, то можно значительно упростить код планировщика инаглядность интерфейса администратора. Многолетний опыт показывает, чтоконцептуально простую Систему обслуживать гораздо проще.Давайте рассмотрим типичные примеры алгоритмических графов, которые можнореализовать в alt_processing.Простой вариант цепочки Скриптов по Событию.Скрипт периодической Задачи при обнаружении новых данных генерирует События наобработку. События могут быть одной Задачи или разных для разных типов данных.События могут обрабатываться параллельно при наличии ресурсов.Один из Скриптов перезапускается до тех пор, пока не выполнится условие.Например, до тех пор пока какая-нибудь операция (например, сетевой запрос) невыполнится успешно.Первичная Задача состоит из трех Скриптов. Первый Скрипт анализирует параметры игенерирует События вторичной Задачи, которые обрабатываются параллельно. ВторойСкрипт первичной Задачи, перезапускаясь, ждет окончания Обработок вторичнойЗадачи. По окончанию вторичных Обработок третий Скрипт завершает Обработку агрегируя результаты вторичных Обработок.",
+      "url": "/alt_proc/en/descr/concept.html",
+      "href": "/alt_proc/en/descr/concept.html"
     }
     ,
   
@@ -133,12 +213,32 @@ window.database = {
     
       
     
+    "sputnik-en-dev-db-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "# Database![](../../img/db.svg)",
+      "url": "/sputnik/en/dev/db.html",
+      "href": "/sputnik/en/dev/db.html"
+    }
+    ,
+  
+    
     "sputnik-ru-dev-db-html": {
       "title": "sputnik",
       "category": "",
       "content": "# Database![](../../img/db.svg)",
       "url": "/sputnik/ru/dev/db.html",
       "href": "/sputnik/ru/dev/db.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-admin-db-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Основные таблицы БД![Таблицы БД](../../img/db.svg)",
+      "url": "/alt_proc/en/admin/db.html",
+      "href": "/alt_proc/en/admin/db.html"
     }
     ,
   
@@ -153,12 +253,32 @@ window.database = {
     ,
   
     
+    "sputnik-en-descr-disclaimer-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "# Дисклеймер- Проект alt_sputnik не является готовым для реального использования, а является  только шаблоном для дальнейшей разработки.- Поскольку он не используется в реальной работе, он может содержать ошибки,  относитесь критически.- Дизайн пользовательского интерфейса оставляет желать лучшего.- Документация оставляет желать лучшего. ",
+      "url": "/sputnik/en/descr/disclaimer.html",
+      "href": "/sputnik/en/descr/disclaimer.html"
+    }
+    ,
+  
+    
     "sputnik-ru-descr-disclaimer-html": {
       "title": "sputnik",
       "category": "",
       "content": "# Дисклеймер- Проект alt_sputnik не является готовым для реального использования, а является  только шаблоном для дальнейшей разработки.- Поскольку он не используется в реальной работе, он может содержать ошибки,  относитесь критически.- Дизайн пользовательского интерфейса оставляет желать лучшего.- Документация оставляет желать лучшего. ",
       "url": "/sputnik/ru/descr/disclaimer.html",
       "href": "/sputnik/ru/descr/disclaimer.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-descr-disclaimer-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Дисклеймер* Первый вариант системы alt_processing появился около 20 лет назад. С тех пор  при каждом новом использовании на новом месте система полностью или частично  переписывалась. Таким образом, выложенный здесь вариант является примерно  пятым вариантом переписанным специально для github и на данный момент  конкретно этот вариант не используется в реальной эксплуатации. Это может  приводить к тому, что часть ошибок мной не замечена, нужно относиться ко всему  критически. В утешение можно заметить, что простота кода позволит легко найти  и исправить ошибку.* Функционал пока сокращен по сравнению с моими реальными системами. С одной  стороны это связано с тем, что для разработки нет свободных ресурсов. Лучше  всего, если появится возможность использовать и доработать этот вариант  системы в реальной эксплуатации. С другой стороны, это осознанное решение не  усложнять систему для того, чтобы порог входа был меньше.",
+      "url": "/alt_proc/en/descr/disclaimer.html",
+      "href": "/alt_proc/en/descr/disclaimer.html"
     }
     ,
   
@@ -181,6 +301,46 @@ window.database = {
       "content": "# Dmitriy Altyntsev### [altyntsev@gmail.com](mailto://altyntsev@gmail.com) ## Full stack developer with a lot of experience in automatic data processing.I think I would be most useful in processing research data. Relocation is possible andeven desirable.## Built up on my own number of automatic satellite data processing and GIS systems:- Irkutsk regional forest fire monitoring system- Baikal regional remote sensing center- Scanex operational remote sensing system- Ctrl2Go operational remote sensing system- Federal catalog of geological explorationThis includes task negotiation, architecture design, development of backend, API, intranetfrontend, frontend business logic, installation, deployment and maintenance. At the peakit was about 20 hosts at 7 locations. Own unique framework[alt_processing](/alt_proc/en/main.html)was developed for automatic data processing.## Main skills- Programming languages: **Python** (Pydantic), Javascript (Typescript), HTML, IDL- Databases: Postgresql, CouchDB- Libs: FastAPI, Cherrypy, Numpy- OS: Linux (Ubuntu), Windows- Clouds: AWS, Openstack- GIS: GDAL, PostGIS, Leaflet, QGIS- Remote Sensing: ENVI, MODIS, VIIRS, Sentinel-1, 2, 5, Landsat 5-9, USGS, Sentinel Hub,  SNAP, CSPP- Soft skills: sociability, responsibility, broad outlook and experience in natural  science and engineering, ability to solve problems in most simple way with minimum  number of used technologies, ability and desire to learn new things## Education- Novosibirsk State University (NSU), Physics Department - The Novosibirsk Specialized Scientific Center on Physics, Mathematics## One more thing:- The winner of the physics Irkutsk region olympics- Twice Irkutsk region governor prize winner for developing the region's forest fire  monitoring system - After university I have been working for several years as an electronic engineer  developing both analog and digital devices## Links:- [github](https://github.com/altyntsev){:target=\"_blank\"}- [scanex](https://www.scanex.ru/en/?setlang=en){:target=\"_blank\"}- [izuch](http://geol.irk.ru/izuch/search/?x=105.00732&y=54.04004&z=6&cols=n&tgf=%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9&sc=10~25~50&vid=%D0%93%D0%B5%D0%BE%D1%84%D0%B8%D0%B7%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F&nom=N-48){:target=\"_blank\"}- [sputnik](http://sputnik.irk.ru/main/bpt/date/?date=2022-09-11){:target=\"_blank\"}",
       "url": "/resume/en.html",
       "href": "/resume/en.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-admin-faq-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# ЧаВО",
+      "url": "/alt_proc/en/admin/faq.html",
+      "href": "/alt_proc/en/admin/faq.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-dev-faq-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# ЧаВО",
+      "url": "/alt_proc/en/dev/faq.html",
+      "href": "/alt_proc/en/dev/faq.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-user-faq-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# ЧаВО",
+      "url": "/alt_proc/en/user/faq.html",
+      "href": "/alt_proc/en/user/faq.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-descr-faq-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# ЧаВО",
+      "url": "/alt_proc/en/descr/faq.html",
+      "href": "/alt_proc/en/descr/faq.html"
     }
     ,
   
@@ -245,6 +405,16 @@ window.database = {
     ,
   
     
+    "alt-proc-en-descr-features-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Функционал ## Реализованный### Планировщик- запуск Обработки периодически (через заданный период времени)- запуск Обработки по Событию с параметрами - перезапуск Скрипта по требованию через указанный период времени- одновременное выполнение нескольких Обработок одной Задачи (указывается в параметрах Задачи)### API- задание параметров конфигурации Задачи - получение информации об Обработке### UI- задание параметров конфигурации Задачи- список Обработок с фильтрацией по Задаче- статусная панель с различной текущей статусной информацией---## Планируемый### Планировщик- сохранение сообщений об ошибках### API- получение информации об Событии### UI- статусная панель с различной текущей статусной информацией",
+      "url": "/alt_proc/en/descr/features.html",
+      "href": "/alt_proc/en/descr/features.html"
+    }
+    ,
+  
+    
     "alt-proc-ru-descr-features-html": {
       "title": "alt_proc",
       "category": "",
@@ -265,6 +435,16 @@ window.database = {
     ,
   
     
+    "alt-proc-en-descr-good-for-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Для каких систем хорошо подходит- с простой структурой обработки, состоящей из небольшого кол-ва ветвлений c  \"тяжелыми\" скриптами- с неопределенными и не отлаженными задачами в процессе разработки, когда нет  отдельных ресурсов на эксплуатацию, а эксплуатировать надо- с небольшим кол-вом серверов (<10)- с небольшим кол-вом задач (<30)- с небольшим кол-вом обработок в сутки (<10000)- не критичных с точки зрения скорости реакции (минута)- не критичных с точки зрения надежности (кратковременные простои допустимы)В целом, система хорошо подходит для исследовательских проектов и проектов наначальной стадии развития.",
+      "url": "/alt_proc/en/descr/good_for.html",
+      "href": "/alt_proc/en/descr/good_for.html"
+    }
+    ,
+  
+    
     "alt-proc-ru-descr-good-for-html": {
       "title": "alt_proc",
       "category": "",
@@ -277,12 +457,32 @@ window.database = {
     
       
     
+    "sputnik-en-admin-install-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "# Инсталляция ",
+      "url": "/sputnik/en/admin/install.html",
+      "href": "/sputnik/en/admin/install.html"
+    }
+    ,
+  
+    
     "sputnik-ru-admin-install-html": {
       "title": "sputnik",
       "category": "",
       "content": "# Инсталляция ",
       "url": "/sputnik/ru/admin/install.html",
       "href": "/sputnik/ru/admin/install.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-admin-install-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Инсталляция## OS```Ubuntu 20.04 LTS minimizedsudo apt install net-tools postgresql```## Python ```3.7-3.9https://docs.conda.io/en/latest/miniconda.htmlwget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.shchmod u+x Miniconda3-latest-Linux-x86_64.sh./Miniconda3-latest-Linux-x86_64.shconda install pyaml psutil psycopg2 uvicornpip install fastapi```## Layout```mkdir alt_procmkdir alt_proc/projectsmkdir alt_proc/wd/launchermkdir alt_proc/wd/ui```## Get sources```cd alt_proc/projectsgit clone git@github.com:altyntsev/alt_proc_api.gitgit clone git@github.com:altyntsev/alt_proc_libs.gitgit clone git@github.com:altyntsev/alt_proc_launcher.gitgit clone git@github.com:altyntsev/alt_proc_ui.gitgit clone git@github.com:altyntsev/alt_proc_proc_tpl.git```## Database```sudo -u postgres psqlcreate user alt_proc with encrypted password 'alt_proc';create database alt_proc;alter database alt_proc owner to alt_proc;psql -U alt_proc -d alt_proc -a -f \\    alt_proc/projects/alt_proc_api/main/install/db.sql ```## Cfg/alt_proc/projects/_cfg/alt_proc.cfgdb:    host: 127.0.0.1    db: alt_proc    user: alt_proc    pwd: alt_procui_users:    - login: alt_proc      pwd: alt_proc            ",
+      "url": "/alt_proc/en/admin/install.html",
+      "href": "/alt_proc/en/admin/install.html"
     }
     ,
   
@@ -297,12 +497,32 @@ window.database = {
     ,
   
     
+    "sputnik-en-user-layers-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "# Слои карты:## OSMПодложка OpenStreetMap## RegionBorderГраницы региона## MetadataСпутниковые метаданныеСверху список доступных дат. При выборе даты в нижний список подгружаются сцены за выбранную дату, границы сцен отображаются на карте.При выборе сцены на карте показывается ее квиклук.При клике на кнопку Download открывается форма запуска Обработки s2_load_data, где поле scene_id заполнено выбранной сценой. Для загрузки данных сцены остается только нажать кнопку Run.   ## RGB    Слой загруженных RGB композитов.Список доступных сцен.При выборе сцены на карте отображается выбранная сцена.",
+      "url": "/sputnik/en/user/layers.html",
+      "href": "/sputnik/en/user/layers.html"
+    }
+    ,
+  
+    
     "sputnik-ru-user-layers-html": {
       "title": "sputnik",
       "category": "",
       "content": "# Слои карты:## OSMПодложка OpenStreetMap## RegionBorderГраницы региона## MetadataСпутниковые метаданныеСверху список доступных дат. При выборе даты в нижний список подгружаются сцены за выбранную дату, границы сцен отображаются на карте.При выборе сцены на карте показывается ее квиклук.При клике на кнопку Download открывается форма запуска Обработки s2_load_data, где поле scene_id заполнено выбранной сценой. Для загрузки данных сцены остается только нажать кнопку Run.   ## RGB    Слой загруженных RGB композитов.Список доступных сцен.При выборе сцены на карте отображается выбранная сцена.",
       "url": "/sputnik/ru/user/layers.html",
       "href": "/sputnik/ru/user/layers.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-user-layout-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Структура директорий Системыalt_proc/ - корневая директория       projects/ - Проекты        _cfg/ - общие конфигурационные файлы Системы        {project}/ - Проект             _сfg/ - конфигурационные файлы Проекта                {task}.task - конфигурационный файл Задачи            main/ - скрипты                {script}.py - Скрипт    wd/ - рабочая директория Системы        procs/ - временные директории Обработок            {proc_id}/ - временная директория Обработки                {i}_{script}/ - временная директория Скрипта",
+      "url": "/alt_proc/en/user/layout.html",
+      "href": "/alt_proc/en/user/layout.html"
     }
     ,
   
@@ -320,7 +540,7 @@ window.database = {
     "sputnik-en-main-html": {
       "title": "sputnik",
       "category": "",
-      "content": "# Satellite data processing automation template based on alt_processing ## Description* [About project](descr/about.html)",
+      "content": "# Satellite data processing automation template based on alt_processing ## Description* [About project](descr/about.html)* [Screenshots](descr/screenshots.html)",
       "url": "/sputnik/en/main.html",
       "href": "/sputnik/en/main.html"
     }
@@ -340,7 +560,7 @@ window.database = {
     "alt-proc-en-main-html": {
       "title": "alt_proc",
       "category": "",
-      "content": "# alt_processing (alt_proc)Automation framework for running and monitoring data processing Python scripts.## Description* [About project](descr/about.html)",
+      "content": "# alt_processing (alt_proc)Automation framework for running and monitoring data processing Python scripts.## Description* [About project](descr/about.html)* [Screenshots](descr/screenshots.html)* [Basic usage](descr/basic_usage.html)",
       "url": "/alt_proc/en/main.html",
       "href": "/alt_proc/en/main.html"
     }
@@ -350,9 +570,19 @@ window.database = {
     "alt-proc-ru-main-html": {
       "title": "alt_proc",
       "category": "",
-      "content": "# alt_processing (alt_proc)### Фреймворк автоматизации запуска и мониторинга скриптов на Питоне для обработки данных   ## Описание* [О проекте](descr/about.html)* [Базовый пример использования](descr/basic_usage.html)* [Терминология](descr/terms.html)* [Компоненты фреймворка](descr/components.html)* [Концепция](descr/concept.html)* [Функционал](descr/features.html)* [Скриншоты](descr/screenshots.html)* [Для каких систем хорошо подходит](descr/good_for.html)* [Для каких систем точно не подходит](descr/bad_for.html)* [Сравнение с альтернативами](descr/alternatives.html)* [Дисклеймер](descr/disclaimer.html)* [ЧаВО](descr/faq.html)## Руководство пользователя* [Структура директорий](user/layout.html)* [Запуск тестовой обработки](user/test.html)* [Административный интерфейс](user/ui.html)* [ЧаВО](user/faq.html)## Руководство администратора* [Использованные технологии](admin/techs.html)* [Инсталляция](admin/install.html)* [БД](admin/db.html)* [ЧаВО](admin/faq.html)## Руководство разработчика* [ЧаВО](dev/faq.html)",
+      "content": "# alt_processing (alt_proc)### Фреймворк автоматизации запуска и мониторинга скриптов на Питоне для обработки данных   ## Описание* [О проекте](descr/about.html)* [Базовый пример использования](descr/basic_usage.html)* [Терминология](descr/terms.html)* [Компоненты фреймворка](descr/components.html)* [Концепция](descr/concept.html)* [Функционал](descr/features.html)* [Скриншоты](descr/screenshots.html)* [Для каких систем хорошо подходит](descr/good_for.html)* [Для каких систем точно не подходит](descr/bad_for.html)* [Сравнение с альтернативами](descr/alternatives.html)* [Дисклеймер](descr/disclaimer.html)## Руководство пользователя* [Структура директорий](user/layout.html)* [Запуск тестовой обработки](user/test.html)* [Административный интерфейс](user/ui.html)## Руководство администратора* [Использованные технологии](admin/techs.html)* [Инсталляция](admin/install.html)* [БД](admin/db.html)",
       "url": "/alt_proc/ru/main.html",
       "href": "/alt_proc/ru/main.html"
+    }
+    ,
+  
+    
+    "sputnik-en-user-menu-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "## Меню- **Projects** - список проектов- **{Project}** - открытый проект- **Tasks** - список Задач, которые можно запустить- **Procs** - список Обработок- **Products** - список Продуктов обработки- **Map** - карта### Создание проекта* Меню Projects - Кнопка New Project* Заполнение формы - имя проекта, начальная и конечная дата, границы региона в geojson* Кнопка Save Project### Открытие проекта* Меню Projects - кликните на имя проекта### Запуск Обработки* Меню Tasks - кликните на имя Задачи* Задайте параметры Обработки* Кнопка Run### Мониторинг Обработок* Меню Procs### Список продуктов обработки* Меню Products### Карта проекта* Меню Map* Слева список картографических слоев в порядке отображения. Слои внизу отображаются  первыми, наверху - последними. ",
+      "url": "/sputnik/en/user/menu.html",
+      "href": "/sputnik/en/user/menu.html"
     }
     ,
   
@@ -387,12 +617,32 @@ window.database = {
     ,
   
     
+    "sputnik-en-descr-screenshots-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "# Screenshots ## New Project![](../../img/screenshots/new_project.png)## Project List![](../../img/screenshots/projects.png)## Task List![](../../img/screenshots/tasks.png)## Run task GUI for s2_load_meta![](../../img/screenshots/s2_load_meta.png)## Processing list![](../../img/screenshots/procs.png)## Map![](../../img/screenshots/map.png)## Product List![](../../img/screenshots/products.png)",
+      "url": "/sputnik/en/descr/screenshots.html",
+      "href": "/sputnik/en/descr/screenshots.html"
+    }
+    ,
+  
+    
     "sputnik-ru-descr-screenshots-html": {
       "title": "sputnik",
       "category": "",
       "content": "# Скриншоты ## Новый проект![](../../img/screenshots/new_project.png)## Список проектов![](../../img/screenshots/projects.png)## Список задач![](../../img/screenshots/tasks.png)## Запуск задачи s2_load_meta![](../../img/screenshots/s2_load_meta.png)## Список обработок![](../../img/screenshots/procs.png)## Карта![](../../img/screenshots/map.png)## Список продуктов![](../../img/screenshots/products.png)",
       "url": "/sputnik/ru/descr/screenshots.html",
       "href": "/sputnik/ru/descr/screenshots.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-descr-screenshots-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Screenshots## New task![](../../img/screenshots/new_task.png)## Task list![](../../img/screenshots/tasks.png)## Status![](../../img/screenshots/status.png)## Processing List![](../../img/screenshots/procs.png)",
+      "url": "/alt_proc/en/descr/screenshots.html",
+      "href": "/alt_proc/en/descr/screenshots.html"
     }
     ,
   
@@ -407,12 +657,32 @@ window.database = {
     ,
   
     
+    "sputnik-en-user-tasks-html": {
+      "title": "sputnik",
+      "category": "",
+      "content": "# Задачи## s2_load_metaЗагрузка метаданных* Заполнение БД метаданными* Загрузка доступных квиклуков## s2_load_dataЗагрузка RGB данных сцены",
+      "url": "/sputnik/en/user/tasks.html",
+      "href": "/sputnik/en/user/tasks.html"
+    }
+    ,
+  
+    
     "sputnik-ru-user-tasks-html": {
       "title": "sputnik",
       "category": "",
       "content": "# Задачи## s2_load_metaЗагрузка метаданных* Заполнение БД метаданными* Загрузка доступных квиклуков## s2_load_dataЗагрузка RGB данных сцены",
       "url": "/sputnik/ru/user/tasks.html",
       "href": "/sputnik/ru/user/tasks.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-admin-techs-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Использованные технологииPython 3.8+### ПланировщикPython### База ДанныхPostgreSQL### APIFastAPI### Web UITypeScript",
+      "url": "/alt_proc/en/admin/techs.html",
+      "href": "/alt_proc/en/admin/techs.html"
     }
     ,
   
@@ -427,6 +697,16 @@ window.database = {
     ,
   
     
+    "alt-proc-en-descr-terms-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Терминология![](../../img/terms.svg)### Проект (Project)Папка, содержащая Скрипты пользовательского проекта. При конфигурации Задачи указываетсяназвание Проекта и название конфигурационного файла Задачи, в котором указываетсяпоследовательность Скриптов Обработки. Исходя из заданной структуры директорий Системазнает где искать нужные ей файлы.### Задача (Task)Конфигурация будущей Обработки, которая будет создана при старте или при появленииСобытия. Состоит из типа Задачи, Проекта, уникального имени и прочих параметров,определяющих поведение будущей Обработки.Типы Задачи:* **PERIODIC** - периодическая (задается период времени между запусками)* **EVENT** - по Событию (в котором содержатся параметры)### Событие (Event)Задание на будущую Обработку. Содержит название Задачи, название События и параметры впроизвольной форме. Задача задает последовательность Скриптов. Название Событияотображается в интерфейсе и позволяет наглядно идентифицировать, что данная Обработкаделает.### Обработка (Processing)Обработка - это собственно процесс выполнения последовательности Скриптов, составляющихОбработку. Этот процесс инициируется из События только при наличии свободных ресурсов дляее выполнения. Создается временные рабочие директории Обработки и Скриптов.### Скрипт (Script)Файл программы на Питоне, находящийся внутри папки Проекта и запускаемый Планировщиком приналичии свободных ресурсов для ее выполнения. Параметры для работы Скрипт получает изСобытия, на базе которого была создана Обработка. Скрипт работает во временной папке,созданной во временной папке Обработки.### Система (System)Автоматическая система, построенная на базе фреймворка alt_processing. Получается из alt_processing добавлением пользовательских Проектов с пользовательскими Скриптами.",
+      "url": "/alt_proc/en/descr/terms.html",
+      "href": "/alt_proc/en/descr/terms.html"
+    }
+    ,
+  
+    
     "alt-proc-ru-descr-terms-html": {
       "title": "alt_proc",
       "category": "",
@@ -437,12 +717,32 @@ window.database = {
     ,
   
     
+    "alt-proc-en-user-test-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Запуск тестовой ОбработкиТестовая обработка представляет из себя реализацию типичной ситуации, которая описана в [базовом примере использования](../descr/basic_usage.html).Две Задачи:- **periodic** - периодическая Задача запускает Скрипт periodic раз в минуту и генерирует Событие с Задачей **proc**- **proc** - Обработка типа EVENT из трех Скриптов## Конфигурация из Web UIМеню Config - New Task## ЗапускМеню Status - изменить статус с Pause на Active## Мониторинг функционированияМеню StatusМеню Procs## Имитация ошибокФатальной ошибкиРестарт после ошибки",
+      "url": "/alt_proc/en/user/test.html",
+      "href": "/alt_proc/en/user/test.html"
+    }
+    ,
+  
+    
     "alt-proc-ru-user-test-html": {
       "title": "alt_proc",
       "category": "",
       "content": "# Запуск тестовой ОбработкиТестовая обработка представляет из себя реализацию типичной ситуации, которая описана в [базовом примере использования](../descr/basic_usage.html).Две Задачи:- **periodic** - периодическая Задача запускает Скрипт periodic раз в минуту и генерирует Событие с Задачей **proc**- **proc** - Обработка типа EVENT из трех Скриптов## Конфигурация из Web UIМеню Config - New Task## ЗапускМеню Status - изменить статус с Pause на Active## Мониторинг функционированияМеню StatusМеню Procs## Имитация ошибокФатальной ошибкиРестарт после ошибки",
       "url": "/alt_proc/ru/user/test.html",
       "href": "/alt_proc/ru/user/test.html"
+    }
+    ,
+  
+    
+    "alt-proc-en-user-ui-html": {
+      "title": "alt_proc",
+      "category": "",
+      "content": "# Административный интерфейс",
+      "url": "/alt_proc/en/user/ui.html",
+      "href": "/alt_proc/en/user/ui.html"
     }
     ,
   

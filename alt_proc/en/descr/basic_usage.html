@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>alt_proc</title>
+  <meta name="description" content="Documentation for small projects">
+
+	<link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="canonical" href="http://0.0.0.0:2002/alt_proc/en/descr/basic_usage.html">
+
+	<link rel="stylesheet" href="/assets/css/docs.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <sidebar class="sidebar" id="sidebar">
+        <ul class="navigation" id="navigation">
+            <li><a class="active" href="/">
+                root
+            </a></li>
+            <li><a class="active" href="/alt_proc/ru/main.html">
+                alt_processing (ru)
+            </a></li>
+            <li><a class="active" href="/alt_proc/en/main.html">
+                alt_processing (en)
+            </a></li>
+            <li><a class="active" href="/sputnik/ru/main.html">
+                sputnik (ru)
+            </a></li>
+            <li><a class="active" href="/sputnik/en/main.html">
+                sputnik (en)
+            </a></li>
+        </ul>
+    </sidebar>
+    <main class="content">
+        <div class="inner">
+            <h1 id="basic-usage">Basic usage</h1>
+
+<p>Let’s suppose that you have developed a number of simple Python scripts that do some
+useful data processing. For example, the first script requests satellite metadata from
+provider by certain parameters. Then other scripts load data, calibrate it, produce RGB
+image and download it to the site storage. Each of these scripts is developed separately
+and can be easily debugged. Intermediate files that used by several scripts could be
+formed during the processing. Everything seems to be working fine manually but the
+production needs to be automated. In such cases, alt_processing comes to the rescue.</p>
+
+<p>Two tasks are configured:</p>
+
+<ul>
+  <li><strong>Periodic Task</strong> includes a script, that discovers new data and generates the <strong>Event</strong>
+for each new satellite scene with its parameters.</li>
+  <li><strong>Event Task</strong> includes a chain of scripts that process new scene: load, calibrate, form
+RGB image, and deliver results.</li>
+</ul>
+
+<p>What is important is that only slight modification of existing scripts is needed.
+Everything is working the same way it would work during a manual process.</p>
+
+<p>For each <strong>Event</strong> the <strong>Launcher</strong> automatically creates <strong>Processing</strong> as chain of
+<strong>Scripts</strong>, makes temporary working directories for the whole <strong>Processing</strong> and each <strong>Script</strong>, 
+run <strong>Scripts</strong> in sequence according to available resources, rerun <strong>Script</strong> in the
+case of a soft error, delete temporary directories after execution to keep required amount
+of free space. User web interface shows the status of <strong>Processings</strong>, gathers statistic of
+success and failures, allows to manually rerun certain <strong>Processing</strong> and <strong>Scripts</strong>, pauses
+<strong>Tasks</strong> and much more. The same functions could be done via <strong>API</strong> and even from running <strong>Script</strong>
+that gives utter control over processing features.</p>
+
+<p><strong>System</strong> starts working but as always something goes wrong sometimes. For example one of the
+<strong>Script</strong> fails from time to time and log file does not help much. In this case before
+temporary directory is not deleted there is an opportunity to run and debug failed <strong>Script</strong>
+in the terminal. This speeds up development and debug process simultaneous with <strong>System</strong>
+production exploitation.</p>
+
+        </div>
+    </main>
+</div>
+<script src="/assets/js/zepto.min.js"></script>
+<script src="/assets/js/lunar.min.js"></script>
+<script src="/assets/js/prism.min.js"></script>
+<script src="/assets/js/database.js"></script>
+<script src="/assets/js/search.js"></script>
+<script src="/assets/js/mobile-navigation.js"></script>
+
+</body>
+</html>
